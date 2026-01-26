@@ -1,5 +1,5 @@
 {
-  /* 경로 설정 */
+  //경로 설정
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

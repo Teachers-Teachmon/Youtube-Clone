@@ -43,8 +43,7 @@ export const Logo = styled.img`
 /* 센터 검색창*/
 export const CenterSection = styled.div`
   display: inline-flex;
-  align-items: flex-start;
-  gap: 0px;
+  gap: -1px;
   flex: 1;
   max-width: 540px;
   margin: auto;
