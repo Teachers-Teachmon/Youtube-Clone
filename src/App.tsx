@@ -1,9 +1,17 @@
 import "@/styles/global.css";
+import { Route, Routes } from "react-router-dom";
+
+import MainLayout from "@/components/layout/main-layout";
+import MainPage from "@/pages/main";
 
 function App() {
   return (
     <>
-      <h1>유튜브 멋지게 만들어봐용</h1>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<MainPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }
