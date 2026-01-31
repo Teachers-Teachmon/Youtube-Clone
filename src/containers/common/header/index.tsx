@@ -6,7 +6,7 @@ const Header = () => {
 
       <S.LeftSection>
         <S.SearchIcon src="/icons/hamburger.png" alt="메뉴" />
-        <S.Logo src="/icons/youtube-logo.png" alt="Youtube" />
+        <S.Logo src="/icons/youtubeLogo.png" alt="Youtube" />
       </S.LeftSection>
 
       <S.CenterSection >

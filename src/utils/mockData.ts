@@ -12,4 +12,4 @@ export const generateMockVideos = (count: number): Video[] => {
     duration: `${Math.floor(Math.random() * 20)}:${String(Math.floor(Math.random() * 60)).padStart(2, '0')}`,
     description: `이것은 영상 ${i + 1}의 설명입니다.`,
   }));
-}
+};

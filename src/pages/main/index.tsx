@@ -1,16 +1,18 @@
-import Header from '@/components/layout/header';
-import Sidebar from '@/components/layout/sidebar';
-import VideoCard from '@/components/ui/video-card';
-import * as S from './style';
-import { generateMockVideos } from '@/utils/mockData';
+import Header from "@/containers/common/header"
+import Sidebar from "@/containers/common/sidebar"
+import VideoGrid from "@/containers/main/video-grid"
+import * as S from "./style"
 
 const MainPage = () => {
-  const videos = generateMockVideos(20);
-
   return (
     <>
       <Header />
-      <Sidebar />
+      <S.MainWrapper>
+        <Sidebar />
+        <VideoGrid />
+      </S.MainWrapper>
     </>
   )
 }
+
+export default MainPage

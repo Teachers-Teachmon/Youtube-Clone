@@ -3,12 +3,11 @@ import styled from '@emotion/styled';
 // 사이드바 전체 컨테이너
 export const Container = styled.aside`
   width: 240px;
+  min-width: 240px;
   height: calc(100vh - 56px);
   background-color: #ffffff;
   border-right: 1px solid #0000001a;
   border-bottom: 1px solid #0000001a;
-  top: 56px;
-  left: 0;
   overflow-y: auto;
   padding: 12px;
 `;
