@@ -1,10 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import MainPage from "@/pages/main"
+import DetailPage from "./pages/detail"
+
 function App() {
 
   return (
-    <>
-      <h1>유튜브 멋지게 만들어봐용</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/watch/:videoId" element={<DetailPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
