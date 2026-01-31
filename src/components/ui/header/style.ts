@@ -16,7 +16,7 @@ export const Base = styled.div`
 `;
 
 export const Space = styled.div`
-  display: hidden;
+  visibility: hidden;
   width: 100%;
   height: 56px;
 `;
@@ -49,7 +49,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.button`
   padding: 0 14px;
   box-sizing: content-box;
   display: flex;
@@ -84,9 +84,9 @@ export const Account = styled.button`
   display: flex;
   height: 36px;
   width: 92px;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  gap: auto;
   padding: 8px;
   color: #065fd4;
   border-radius: 18px;
