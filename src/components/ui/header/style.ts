@@ -10,6 +10,7 @@ export const Base = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
 
   position: fixed;
   top: 0px;
