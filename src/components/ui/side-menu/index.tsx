@@ -27,6 +27,7 @@ function SideMenu() {
 
   return (
     <div className="side-menu">
+      <S.Space width={width} />
       <S.Base width={width}>
         {isOpen
           ? openShortcuts.map((v, i) => (

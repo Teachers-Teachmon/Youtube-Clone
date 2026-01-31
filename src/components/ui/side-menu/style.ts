@@ -4,12 +4,20 @@ interface SideMenuProps {
   width: number;
 }
 
+export const Space = styled.div<SideMenuProps>`
+  width: ${({ width }) => width}px;
+  visibility: hidden;
+`;
+
 export const Base = styled.div<SideMenuProps>`
   display: flex;
   width: ${({ width }) => width}px;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
+  position: fixed;
+  top: 56px;
+  left: 0px;
 `;
 
 export const Shortcut = styled.button`
