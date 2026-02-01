@@ -14,6 +14,12 @@ export const Base = styled.div<BaseProps>`
   padding: 0 8px 32px 8px;
   gap: 16px;
   box-sizing: border-box;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 `;
 
 export const Thumbnail = styled.img`
