@@ -1,15 +1,12 @@
-import { useSideMenuStore } from "@/stores/useSideMenuStore";
+import { memo } from "react";
 import * as S from "./style";
-import { useEffect, useState } from "react";
 import { openShortcuts, shortcuts } from "@/constants/sideMenu";
 
-function SideMenu() {
-  const isOpen = useSideMenuStore(state => state.isOpen);
-  const [width, setWidth] = useState(72);
-
-  useEffect(() => {
-    setWidth(isOpen ? 240 : 72);
-  }, [isOpen]);
+interface props {
+  isOpen: boolean;
+}
+function SideMenu({ isOpen }: props) {
+  const width = isOpen ? 240 : 72;
 
   return (
     <div className="side-menu">
@@ -37,4 +34,4 @@ function SideMenu() {
   );
 }
 
-export default SideMenu;
+export default memo(SideMenu);

@@ -15,8 +15,8 @@ export const Base = styled.div<SideMenuProps>`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
-  position: fixed;
-  top: 56px;
+  position: absolute;
+  top: 0px;
   left: 0px;
 `;
 
