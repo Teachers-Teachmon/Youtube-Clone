@@ -9,3 +9,7 @@ button {
   cursor: pointer;
   background-color: #ffffff00;
 }
+
+img:not([src]) {
+  background-color: black;
+}
