@@ -14,6 +14,7 @@ export const Base = styled.div`
 
   position: fixed;
   top: 0px;
+  z-index: 998;
 `;
 
 export const Space = styled.div`
