@@ -4,14 +4,15 @@ import { openShortcuts, shortcuts } from "@/constants/sideMenu";
 
 interface props {
   isOpen: boolean;
+  position: string;
 }
-function SideMenu({ isOpen }: props) {
+function SideMenu({ isOpen, position }: props) {
   const width = isOpen ? 240 : 72;
 
   return (
     <div className="side-menu">
-      <S.Space width={width} />
-      <S.Base width={width}>
+      <S.Space width={width} position={position} />
+      <S.Base width={width} position={position}>
         {isOpen
           ? openShortcuts.map((v, i) => (
               <S.ShortcutBlock key={i}>

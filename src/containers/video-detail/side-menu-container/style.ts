@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Base = styled.div`
+export const Base = styled.div<{ top: number }>`
   display: flex;
   flex-flow: column nowrap;
   width: 240px;
@@ -8,7 +8,7 @@ export const Base = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   position: absolute;
-  top: 0px;
+  top: ${({ top }) => top}px;
   left: -240px;
   transition: left 0.2s ease;
   z-index: 1000;

@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 interface SideMenuProps {
   width: number;
+  position: string;
 }
 
 export const Space = styled.div<SideMenuProps>`
@@ -15,8 +16,8 @@ export const Base = styled.div<SideMenuProps>`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
-  position: absolute;
-  top: 0px;
+  position: ${({ position }) => position};
+  top: ${({ position }) => (position === "fixed" ? "56" : "0")}px;
   left: 0px;
 `;
 

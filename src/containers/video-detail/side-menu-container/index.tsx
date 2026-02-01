@@ -9,14 +9,25 @@ function SideMenuContainer() {
   const toggleSideMenu = useSideMenuStore(state => state.toggleIsOpen);
   const isOpen = useSideMenuStore(state => state.isOpen);
   const [classList, setClassList] = useState("");
+  const [top, setTop] = useState(0);
 
   useEffect(() => {
+    setTop(window.scrollY);
     setClassList(isOpen ? "opened" : "");
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   return (
     <>
-      <S.Base className={classList}>
+      <S.Base className={classList} top={top}>
         <S.Head>
           <S.Button onClick={() => toggleSideMenu()}>
             <img src="/icons/common/menuBurger.svg" width={26} />
@@ -27,7 +38,7 @@ function SideMenuContainer() {
           </S.Logo>
         </S.Head>
         <S.Body>
-          <SideMenu isOpen />
+          <SideMenu isOpen position="absolute" />
         </S.Body>
       </S.Base>
       <S.Overlay className={classList} onClick={() => toggleSideMenu()} />
