@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import GlobalStyles from '@/styles/GlobalStyles'
 import App from '@/App'
 
 const queryClient = new QueryClient({
@@ -15,6 +16,7 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}> {/*App 전체를 감싸서 모든 컴포넌트에서 React Query 사용 가능하게 만듦*/}
+      <GlobalStyles />
       <App />
     </QueryClientProvider>
   </StrictMode>,

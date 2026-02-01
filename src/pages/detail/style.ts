@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-export const PageWrapper = styled.div`
-  display: flex;
-`;
-
 export const MainContent = styled.main`
   flex: 1;
   background-color: #f9f9f9;
