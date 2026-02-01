@@ -1,23 +1,9 @@
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
 import * as S from "./style";
 import { useEffect, useState } from "react";
+import { openShortcuts, shortcuts } from "@/constants/sideMenu";
 
 function SideMenu() {
-  const shortcuts = [
-    { icon: "/assets/home.svg", script: "홈" },
-    { icon: "/assets/shorts.svg", script: "Shorts" },
-    { icon: "/assets/subscriptions.svg", script: "구독" },
-    { icon: "/assets/accountBlack.svg", script: "내 페이지" },
-  ];
-  const openShortcuts = [
-    [
-      { icon: "/assets/home.svg", script: "홈" },
-      { icon: "/assets/shorts.svg", script: "Shorts" },
-      { icon: "/assets/subscriptions.svg", script: "구독" },
-      { icon: "/assets/accountBlack.svg", script: "내 페이지" },
-      { icon: "/assets/history.svg", script: "기록" },
-    ],
-  ];
   const isOpen = useSideMenuStore(state => state.isOpen);
   const [width, setWidth] = useState(72);
 
