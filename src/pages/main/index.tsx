@@ -17,8 +17,8 @@ function MainPage() {
     <S.Main>
       <SideMenu isOpen={isSideMenuOpen} />
       <S.Videos>
-        {dummyVideos.map((v, i) => (
-          <VideoCard key={i} video={v} now={now} width="32.5%" size="default" />
+        {dummyVideos.map((_, i) => (
+          <VideoCard key={i} videoIndex={i} now={now} width="32.5%" size="default" />
         ))}
       </S.Videos>
     </S.Main>
