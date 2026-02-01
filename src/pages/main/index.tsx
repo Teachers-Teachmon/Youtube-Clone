@@ -13,7 +13,7 @@ function MainPage() {
   return (
     <S.Videos>
       {dummyVideos.map((v, i) => (
-        <VideoCard key={i} video={v} now={now} width="32.5%" size="default" />
+        <VideoCard key={i} video={v} now={now} />
       ))}
     </S.Videos>
   );
