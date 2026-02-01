@@ -18,6 +18,15 @@ function VideoDetailPage() {
     <>
       <SideMenuContainer />
       <S.Main>
+        <S.VideoDetail>
+          <S.Video />
+          <S.VideoInfo>
+            {video.name}
+            <br />
+            {video.uploader.name}, 구독자 {video.uploader.subscriber}
+            <br />
+          </S.VideoInfo>
+        </S.VideoDetail>
         <S.VideoList>
           {dummyVideos.map((_, i) => {
             if (i !== currentVideo) return <VideoCard key={i} videoIndex={i} now={now} width="100%" size="small" />;
