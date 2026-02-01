@@ -26,7 +26,7 @@ function VideoCard({ video, now, width, size }: props) {
           </S.ViewAndTime>
         </S.VideoInfo>
         <S.Action>
-          <img src="/assets/menuDot.svg" />
+          <img src="/icons/common/menuDot.svg" />
         </S.Action>
       </S.VideoData>
     </S.Base>
