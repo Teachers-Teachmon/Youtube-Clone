@@ -2,14 +2,17 @@ import type { Video } from "@/types/video";
 import * as S from "./style";
 import processView from "@/utils/processView";
 import processTime from "@/utils/processTime";
+import type { CardSize } from "@/types/videoCard";
 
 interface props {
   video: Video;
   now: Date;
+  width: string;
+  size: CardSize;
 }
-function VideoCard({ video, now }: props) {
+function VideoCard({ video, now, width, size }: props) {
   return (
-    <S.Base>
+    <S.Base width={width} size={size}>
       <S.Thumbnail />
       <S.VideoData>
         <S.ChannelImg />
@@ -22,6 +25,9 @@ function VideoCard({ video, now }: props) {
             {processTime(video.uploadedTime, now)}
           </S.ViewAndTime>
         </S.VideoInfo>
+        <S.Action>
+          <img src="/icons/common/menuDot.svg" />
+        </S.Action>
       </S.VideoData>
     </S.Base>
   );
